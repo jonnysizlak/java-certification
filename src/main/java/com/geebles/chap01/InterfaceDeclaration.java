@@ -16,5 +16,6 @@ public interface InterfaceDeclaration {
 	int CONSTANT1 = 1;
 	public int CONSTANT2 = 2;
 	public final int CONSTANT3 = 3;
-
+	public static final int CONSTANT4 = 4;
+	
 }
