@@ -15,5 +15,18 @@ public class Identifiers {
 		String zip7;
 		
 	}
+	
+//	private class 7zip {}
 
+	private class zip7 {}
+	
+	private class ¥yen {}
+	
+	private class _underscore {}
+	
+//	private class dash-dash {}	
+
+	public class Subclass {}
+	
 }
+
