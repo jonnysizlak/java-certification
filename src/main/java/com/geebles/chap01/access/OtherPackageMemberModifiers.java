@@ -1,4 +1,4 @@
-package com.geebles.chap01;
+package com.geebles.directory.chap01.access;
 
 import com.geebles.chap01.MemberModifiers;
 
@@ -14,9 +14,9 @@ public class OtherPackageMemberModifiers extends MemberModifiers {
 			x = mm.protectedField;
 			x = mm.protectedMethod();
 			
-			// Default since I extend and am in the same package
-			x = mm.defaultField;
-			x = mm.defaultMethod();
+			// Default won't work since am not the same package
+//			x = mm.defaultField;
+//			x = mm.defaultMethod();
 
 			// Private won't work
 //			x = mm.privateField;
