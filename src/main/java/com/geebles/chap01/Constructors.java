@@ -1,0 +1,1 @@
+package com.geebles.chap01;public class Constructors {	public static void main (String... args) {		Constructors c = new Constructors();		c.print();	}	public Constructors() {		System.out.println("Construct!");	}		public void print() {		System.out.println("Print!");	}}
