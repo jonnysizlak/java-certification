@@ -1,0 +1,1 @@
+package com.geebles.chap01;enum CoffeeSize { TALL, GRANDE, VENTI } enum CoffeeType { CORSICIAN, HAZELNUT, DECAF } public class Coffee {	CoffeeSize size;	CoffeeType type;	public static void main (String... args) {		Coffee c = new Coffee();		c.size = CoffeeSize.TALL;		c.type = CoffeeType.DECAF;	}}
