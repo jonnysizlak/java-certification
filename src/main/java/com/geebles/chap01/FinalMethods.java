@@ -21,6 +21,9 @@ public class FinalMethods {
 		//mutant = new Mutable();
 	}
 	
+	void abstract public abstractMethod() {
+	}
+	
 	private class Mutable {
 		public void changeState() {
 		}
