@@ -1,0 +1,9 @@
+o   1. C
+  x 2. xA B D (rules around naming java bean methods)
+o   3. A E
+o   4. A
+o   5. D E
+  x 6. D  (method overloading)    
+  x 7. C D xF (where enums can be declared)
+o   8. B 
+  x 9. A (calling methods from static contexts)
