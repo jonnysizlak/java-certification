@@ -11,6 +11,35 @@ public class LegalReturnTypes {
 	LegalReturnTypes gogo() {
 		return null;
 	}
+	
+	public String nullReturn() {
+		return null;
+	}
+	
+	public String[] arrayReturn() {
+		return new String[] {"Red", "Black", "Blue"};
+	}
+	
+	public int returnImplicitConversion() {
+		char c = 'c';
+		return c;
+	}
+	
+	public int returnExplicitCast() {
+		float f = 32.5f;
+		return (int) f;
+	}
+	
+	public void noReturnOnVoid() {
+//		return null;
+//		return 1;
+//		return true;
+		return;
+	}
+	
+	public LegalReturnTypes returnImplicitCast() {
+		return new Override();
+	}
 }
 
 class Override extends LegalReturnTypes {
