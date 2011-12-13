@@ -11,4 +11,6 @@ public class ConstructorsAndInstantiation {
 		ConstructorsAndInstantiation cai = new ConstructorsAndInstantiation(1);
 		System.err.println(cai.trouble);
 	}
+	
+	
 }

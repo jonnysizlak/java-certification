@@ -2,6 +2,10 @@ package com.geebles.chap02.animals;
 
 public class Horse extends Animal {
 
+	public static void dance () {
+		System.out.println("Horse dance!");
+	}
+
 	int legs = 4;
 
 	public Horse() {

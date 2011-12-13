@@ -4,9 +4,18 @@ public class Pony extends Horse {
 
 	int legs = 8;
 
+	public static void dance() {
+		System.out.println("Pony Dance!");
+	} 
+
+	
 	public static void main (String... args) {
 		Pony p = new Pony(16);
 		System.out.println(p.legs);
+		Horse h = p;
+		System.out.println("-----");
+		h.dance();
+		System.out.println("-----");
 	}
 
 	public Pony(int legs) {
