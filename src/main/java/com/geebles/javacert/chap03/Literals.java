@@ -57,6 +57,6 @@ public class Literals {
 		// unless both literals add up to be too big for a byte
 		//whatnow = 65 + 65;
 		
-		you stopped on page 198 "Assigning one primitive variable to another primitive variable."
+		you stopped on page 198 "Assigning one primitive variable to another primitive variable."Bmi$$r0cks52011	
 	}
 }
