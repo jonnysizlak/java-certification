@@ -84,6 +84,12 @@ public class Operators {
 		System.out.println("buffer instanceof String : " + (buffer instanceof String));
 		System.out.println("builder instanceof String : " + (builder instanceof String));
 		System.out.println("string instanceof Object : " + (string instanceof Object));
+		System.out.println("null instanceof Object : " + (null instanceof Object));
+		
+		int[] array = new int[10];
+		System.out.println("array instanceof Object : " + (array instanceof Object));
+		
+		You stopped on page 298, Arithmetic Operators.
 		
 	}
 	
