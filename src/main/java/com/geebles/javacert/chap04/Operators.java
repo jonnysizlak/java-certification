@@ -89,7 +89,15 @@ public class Operators {
 		int[] array = new int[10];
 		System.out.println("array instanceof Object : " + (array instanceof Object));
 		
-		You stopped on page 298, Arithmetic Operators.
+		System.out.println("-----------");
+
+		int lhs = 31;
+		int rhs = 4;
+		
+		System.out.println(lhs + " / " + rhs + " = " + (lhs / rhs));
+		System.out.println(lhs + " % " + rhs + " = " + (lhs % rhs));
+		
+
 		
 	}
 	
