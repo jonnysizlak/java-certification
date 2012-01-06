@@ -1,10 +1,9 @@
 package com.geebles.javacert.chap04;
 
-import java.lang.StringBuilder;
-import java.lang.StringBuffer;
+import java.util.Date;
 
 public class Operators {
-	public static void main (String... args) {
+	public static void main (String... args) throws Exception {
 		
 		// Compound operators
 		int y = 6;
@@ -97,9 +96,88 @@ public class Operators {
 		System.out.println(lhs + " / " + rhs + " = " + (lhs / rhs));
 		System.out.println(lhs + " % " + rhs + " = " + (lhs % rhs));
 		
+		System.out.println("-----------");
 
+		System.out.println(2 + 2);
+		System.out.println(2 + "2");
+		System.out.println("2" + 2);
+		System.out.println("2" + "2");
 		
-	}
+		System.out.println("-----------");
+		
+		int zero = 0;
+		System.out.println("prefix:" + ++zero);
+		System.out.println("postfix:" + zero++);
+		System.out.println("final:" + zero);
+		
+		final int finalCountdown = 5;
+		// not gonna work
+		//int endTimes = --finalCountdown;
+		
+		System.out.println("-----------");
+
+		System.out.println((System.currentTimeMillis() % 2) == 0 ? "even" : "odd");
+		Thread.sleep(1);
+		System.out.println((System.currentTimeMillis() % 2) == 0 ? "even" : "odd");
+		Thread.sleep(1);
+		System.out.println((System.currentTimeMillis() % 2) == 0 ? "even" : "odd");
+		Thread.sleep(1);
+		System.out.println((System.currentTimeMillis() % 2) == 0 ? "even" : "odd");
+		Thread.sleep(1);
+		System.out.println((System.currentTimeMillis() % 2) == 0 ? "even" : "odd");
+		Thread.sleep(1);
+		// They can even be different types
+		System.out.println((System.currentTimeMillis() % 2) == 0 ? "even" : 7);
+		
+		System.out.println("-----------");
+		
+		Object bomb = null;
+		
+		if (false && bomb.equals(new Object())) {
+			System.out.println("boom!");
+		} else {
+			System.out.println("short circuited!");
+		}
+
+		if (true || bomb.equals(null)) {
+			System.out.println("short circuited!");
+		} else {
+			System.out.println("boom!");
+		}
+
+		// non-short circuit evaluated conditionals blow up
+//		if (false & bomb.equals(new Object())) {
+//			System.out.println("boom!");
+//		} else {
+//			System.out.println("short circuited!");
+//		}
+
+//		if (true | bomb.equals(null)) {
+//			System.out.println("short circuited!");
+//		} else {
+//			System.out.println("boom!");
+//		}
+		
+		System.out.println("-----------");
+
+		int xor = 6 ^ 22 ^ 83;
+		System.out.println(xor);
+		
+		String magicEightBall = (true ^ false) ? "yes" : "no";
+		System.out.println("am I going to name my band xor? " + magicEightBall);
+
+		magicEightBall = (false ^ false) ? "yes" : "no";
+		System.out.println("is 5 years time the saddest song in the world? " + magicEightBall);
+
+		magicEightBall = (true ^ true) ? "yes" : "no";
+		System.out.println("do you drink too much while studying for this exam? " + magicEightBall);
+
+		magicEightBall = (!false) ? "yes" : "no";
+		System.out.println("do you need to make yourself a new playlist? " + magicEightBall);
+		
+		System.out.println("-----------");
+
+		}
 	
 	enum Color { RED, GREEN, BLUE } // the semicolor is optional after an enum declaration
 	
