@@ -1,4 +1,4 @@
-package com.geebles.javacert.chap05;
+package com.geebles.javacert.package com.geebles.javacert.chap01;
 
 public class LoopsAndIterators {
 	public static void main (String... args) {
@@ -30,6 +30,20 @@ public class LoopsAndIterators {
 			System.out.println();
 		}
 		System.out.println(c + " burpees!");
+		// You can declare multiple variables, and do multiple iteration expressions
+		for (int i = 1, j = 10; (i < 10) && (j > 0); i = i * 2, j = j / 2, System.out.println("it smells like updog in here")) {
+			System.out.println("i = " + i + "; j = " + j);
+		}
+
+		int a[] = {1,2,3,4};
+		for (int i : a) {
+			System.out.print(i + " ");
+		}
+	
+		int xx = 0;
+		// Nope! Need to declare a new variable
+		// for (x : a) {}
+			
 		
-	}
+	}	
 }

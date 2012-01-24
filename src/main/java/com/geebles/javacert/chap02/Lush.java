@@ -1,4 +1,4 @@
-package com.geebles.chap02;
+package com.geebles.javacert.chap02;
 
 public interface Lush extends HumanBeing {
 

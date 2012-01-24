@@ -1,4 +1,4 @@
-package com.geebles.chap01.food;
+package com.geebles.javacert.chap01.food;
 
 public class Apple extends Fruit {
 	public static void main(String... args) {

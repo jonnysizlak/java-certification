@@ -1,4 +1,4 @@
-package com.geebles.chap01.tea;
+package com.geebles.javacert.chap01.tea;
 
 import com.geebles.chap01.Beverage;
 

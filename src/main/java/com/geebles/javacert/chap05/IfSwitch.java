@@ -1,4 +1,4 @@
-package com.geebles.javacert.chap05;
+package com.geebles.javacert.package com.geebles.javacert.chap01;
 
 public class IfSwitch {
 	public static void main (String... args) {

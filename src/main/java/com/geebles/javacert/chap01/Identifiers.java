@@ -1,4 +1,4 @@
-package com.geebles.chap01;
+package com.geebles.javacert.chap01;
 
 public class Identifiers {
 

@@ -1,4 +1,4 @@
-package com.geebles.chap01;
+package com.geebles.javacert.chap01;
 
 public abstract class FinalMethods {
 	public final void finalMethod() {

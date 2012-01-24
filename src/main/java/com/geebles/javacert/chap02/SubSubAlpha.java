@@ -1,4 +1,4 @@
-package com.geebles.chap02;
+package com.geebles.javacert.chap02;
 
 class Alpha {
 	static String s = " ";

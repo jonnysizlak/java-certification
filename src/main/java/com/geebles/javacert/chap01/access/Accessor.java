@@ -1,4 +1,4 @@
-package com.geebles.chap01.access;
+package com.geebles.javacert.chap01.access;
 
 import com.geebles.chap01.StuffToAccess;
 

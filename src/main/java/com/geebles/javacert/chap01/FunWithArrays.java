@@ -1,1 +1,1 @@
-package com.geebles.chap01;public class FunWithArrays {	public static void main (String... args) {		int[] key1;		int key2[];				Thread[] threads1;		Thread threads2[];				int[][][] matrix;		int[] twodee[];	}}
+package com.geebles.javacert.chap01;public class FunWithArrays {	public static void main (String... args) {		int[] key1;		int key2[];				Thread[] threads1;		Thread threads2[];				int[][][] matrix;		int[] twodee[];	}}

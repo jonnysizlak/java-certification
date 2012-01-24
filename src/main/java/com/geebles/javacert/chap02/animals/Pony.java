@@ -1,4 +1,4 @@
-package com.geebles.chap02.animals;
+package com.geebles.javacert.chap02.animals;
 
 public class Pony extends Horse {
 
