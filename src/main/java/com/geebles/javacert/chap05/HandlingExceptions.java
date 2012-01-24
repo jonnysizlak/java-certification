@@ -1,6 +1,6 @@
 package com.geebles.javacert.chap05;
 
-public class HandlingExceptions {
+public class HandlingExceptions implements HandlingExceptionsInterface {
 	public static void main (String... args) throws Exception {
 		try {
 			System.out.println("Starting the try block...");
@@ -42,6 +42,10 @@ public class HandlingExceptions {
 			System.out.println("Catching exception in main()");
 		}
 		
+		// You can only throw classes the extend Throwable
+		// throw new HandlingExceptions();
+		Exception e = new HandlingExceptions().new HandlingExceptionsException();
+		
 	}
 	
 	public static void methodOne() throws Exception {
@@ -54,4 +58,22 @@ public class HandlingExceptions {
 		System.out.println("Throwing exception in methodThree()");
 		throw new Exception();
 	}
+	
+	public void exceptionMethod() throws Exception {
+		// You don't actually have to throw an exception even if the interface says you do.
+	}
+	
+	// But you can't throw an exception if the interface doesn't say you do.
+//	public void nonExceptionMethod() throws Exception {
+//		throw new Exception();
+//	}
+
+	// but you can throw unchecked exceptions all you want.
+	public void nonExceptionMethod() throws RuntimeException {
+	
+	}
+
+	private class HandlingExceptionsException extends Exception {
+	}
+	
 }
