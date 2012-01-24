@@ -1,4 +1,4 @@
-package com.geebles.javacert.package com.geebles.javacert.chap01;
+package com.geebles.javacert.chap05;
 
 public class LoopsAndIterators {
 	public static void main (String... args) {
