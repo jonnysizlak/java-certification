@@ -5,6 +5,4 @@ public class AssertionsMechanism {
 		assert(args != null);
 		assert(args == null): "Args in not null!";
 	}
-	
-	You stopped on page 394: Certification Summary
 }
