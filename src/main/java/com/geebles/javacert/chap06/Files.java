@@ -21,6 +21,7 @@ public class Files {
 			System.out.println(file1.createNewFile());
 			System.out.println(file1.exists());
 			System.out.println(file1.delete());
+			System.out.println(file1.exists());
 		} catch (IOException ioe) {
 		
 		}
