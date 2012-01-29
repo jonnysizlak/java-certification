@@ -10,18 +10,18 @@ public class Files {
 	}
 
 	public void file2() {
-	
+		
 	}
 	
 	
 	public void file1() {
 		try {
-			File file1 = new File("afile.txt");
-			System.out.println(file1.exists());
-			System.out.println(file1.createNewFile());
-			System.out.println(file1.exists());
-			System.out.println(file1.delete());
-			System.out.println(file1.exists());
+			File file = new File("afile.txt");
+			System.out.println(file.exists());
+			System.out.println(file.createNewFile());
+			System.out.println(file.exists());
+			System.out.println(file.delete());
+			System.out.println(file.exists());
 		} catch (IOException ioe) {
 		
 		}
