@@ -20,6 +20,7 @@ public class Files {
 			System.out.println(file1.exists());
 			System.out.println(file1.createNewFile());
 			System.out.println(file1.exists());
+			System.out.println(file1.delete());
 		} catch (IOException ioe) {
 		
 		}
