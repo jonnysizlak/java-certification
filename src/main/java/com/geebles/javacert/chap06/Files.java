@@ -13,33 +13,27 @@ public class Files {
 
 	public void directory2() {
 		try {
-			File deldir = new File("deldir");
-			deldir.mkdir();
-			File delfile1 = new File(deldir, "delfile1.txt");
-			delfile1.createNewFile();
+			File dir = new File("dir");
+			dir.mkdir();
+			File file = new File(dir, "afile.txt");
+			file.createNewFile();
 			
-			File delfile2 = new File(deldir, "delfile2.txt");
-			delfile2.createNewFile();
-			
-			delfile1.delete();
-			System.out.println("deldir is " + deldir.delete());
-			
-			File newname = new File(deldir, "newName.txt");
-			delfile2.renameTo(newname);
+			File newname = new File(dir, "newName.txt");
+			file.renameTo(newname);
 			
 			File newdir = new File("newdir");
-			deldir.renameTo(newdir);
-
+			dir.renameTo(newdir);
+			
 			System.out.println("====================");
 			for(String current : newdir.list()) {
 				System.out.println(current);
 			}
 			System.out.println("====================");
 
-			delfile2.delete();
-			deldir.delete();
+			System.out.println("deleted newname? " + newname.delete());
+			System.out.println("deleted newdir? " + newdir.delete());
 			
-		} catch (IOException ioe) {
+			} catch (IOException ioe) {
 		}
 	}
 	
