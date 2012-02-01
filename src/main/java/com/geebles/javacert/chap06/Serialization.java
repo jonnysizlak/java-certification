@@ -1,7 +1,46 @@
 package com.geebles.javacert.chap06;
 
-public class Serialization {
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+public class Serialization implements Serializable {
+
+	public String s1 = "Hello World";
+	public String s2 = "Hey there.";
+
 	public static void main(String... args) {
-		You stopped on page 459 Serialization
+	
+		Serialization s = new Serialization();
+		s.s2 = "Hola Aqui";
+		
+		try {
+			FileOutputStream fs = new FileOutputStream("testSer.ser");
+			ObjectOutputStream os = new ObjectOutputStream(fs);
+			os.writeObject(s);
+			os.close();
+		} catch (Exception e ) {
+			System.err.println("Couldn't write!");
+			e.printStackTrace();
+		}
+		
+		s.s2 = "Hey there.";
+		s.s1 = "Good morning, starshine.";
+		
+		try {
+			FileInputStream fis = new FileInputStream("testSer.ser");
+			ObjectInputStream is = new ObjectInputStream(fis);
+			Serialization s2 = (Serialization) is.readObject();
+			is.close();
+			System.out.println("s.s1: " + s.s1);
+			System.out.println("s.s2: " + s.s2);
+			System.out.println("s2.s1: " + s2.s1);
+			System.out.println("s2.s2: " + s2.s2);
+		} catch (Exception e) {
+			System.err.println("Couldn't read!");
+			e.printStackTrace();		
+		}
 	}
 }
