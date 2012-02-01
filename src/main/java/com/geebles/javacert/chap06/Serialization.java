@@ -49,11 +49,26 @@ public class Serialization implements Serializable {
 		System.out.println("===================");
 		
 		try {
+			Dog d = new Serialization().new Dog();
+			d.c = new Serialization().new Collar();
+			
+			d.size = 4;
+			d.c.size = 2;
 			File dogser = new File("dog.ser");
 			FileOutputStream fs = new FileOutputStream(dogser);
 			ObjectOutputStream os = new ObjectOutputStream(fs);
-			os.writeObject(s);
+			os.writeObject(d);
 			os.close();
+			
+			FileInputStream fis = new FileInputStream(dogser);
+			ObjectInputStream is = new ObjectInputStream(fis);
+			Dog dog = (Dog) is.readObject();
+			is.close();
+			
+			System.out.println("dog.size: " + dog.size);
+			System.out.println("dog.c.size: " + dog.c.size);
+			
+			dogser.delete();
 		} catch (Exception e ) {
 			System.err.println("Couldn't write!");
 			e.printStackTrace();
@@ -61,11 +76,31 @@ public class Serialization implements Serializable {
 		
 	}
 	
-	class Dog {
-		Collar c;
+	class Dog implements Serializable {
+		int size = 3;
+		transient Collar c;
+		
+		private void writeObject(ObjectOutputStream os) {
+			try {
+				os.defaultWriteObject();
+				os.writeInt(c.size);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+		private void readObject(ObjectInputStream is) {
+			try {
+				is.defaultReadObject();
+				c = new Collar();
+				c.size = is.readInt();
+			} catch (Exception e) {
+			
+			}
+		}
 	}
 	
 	class Collar {
-		int size;
+		int size = 3;
 	}
 }
