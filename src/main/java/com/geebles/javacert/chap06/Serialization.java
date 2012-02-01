@@ -1,5 +1,6 @@
 package com.geebles.javacert.chap06;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
@@ -30,7 +31,8 @@ public class Serialization implements Serializable {
 		s.s1 = "Good morning, starshine.";
 		
 		try {
-			FileInputStream fis = new FileInputStream("testSer.ser");
+			File file = new File("testSer.ser");
+			FileInputStream fis = new FileInputStream(file);
 			ObjectInputStream is = new ObjectInputStream(fis);
 			Serialization s2 = (Serialization) is.readObject();
 			is.close();
@@ -38,9 +40,32 @@ public class Serialization implements Serializable {
 			System.out.println("s.s2: " + s.s2);
 			System.out.println("s2.s1: " + s2.s1);
 			System.out.println("s2.s2: " + s2.s2);
+			file.delete();
 		} catch (Exception e) {
 			System.err.println("Couldn't read!");
 			e.printStackTrace();		
 		}
+		
+		System.out.println("===================");
+		
+		try {
+			File dogser = new File("dog.ser");
+			FileOutputStream fs = new FileOutputStream(dogser);
+			ObjectOutputStream os = new ObjectOutputStream(fs);
+			os.writeObject(s);
+			os.close();
+		} catch (Exception e ) {
+			System.err.println("Couldn't write!");
+			e.printStackTrace();
+		}
+		
+	}
+	
+	class Dog {
+		Collar c;
+	}
+	
+	class Collar {
+		int size;
 	}
 }
